@@ -8,13 +8,24 @@ But if the separation distance between the moon and the earth are changing with 
 
 However, the moon's orbit around the earth IS actually very circular. How 'circular' an ellipse is can be measured by **eccentricity** of the ellipse, which is simply the ratio of (distance between centre of ellipse and the focus) to the length of the semi-major axis, with a perfect circle having an eccentricity of 0 and 1 being a perfect ellipse. It turns out that the eccentricity of the moon's orbit around earth is $0.0549$.
 
-![Ellipse alt ><](https://github.com/Sealbatter/Sun-Earth-Moon-system/assets/85449286/4889d411-c809-4d78-895a-850a4ea1d8ab)
-
-*Source: GeeksforGeeks*
-
 ![ellipses](https://github.com/Sealbatter/Sun-Earth-Moon-system/assets/85449286/93803c3d-8eba-454d-b2ce-986df521a680)
 
 *Source: utexas*
+
+To really appreciate how circular-esque the orbit of the moon is around earth, observe this plot!
+
+![Path of moon orbit around Earth](https://github.com/Sealbatter/Sun-Earth-Moon-system/assets/85449286/829e5e6c-80ad-4da1-bc00-d784093649b1)
+
+Convinced yet?
+
+The code that I have written produces 3 gifs.
+
+The first, animation2.gif, is a crude mathematical visualisation of the orbit of the earth and the moon around the sun. I would not go as far as to call it modelling the orbit because there is no physics involved - just geometry.
+
+The second, 2body.gif, is a proper model of the earth orbitting the sun in perfect circular motion (the orbit is not actually circular, but like the moon's orbit around earth, the earth's orbit around the sun is also almost circular that we can treat it as circular). We construct a 2nd order differential equation with Newton's Law of Universal Gravitation and we carry out integration forward in time with the Runge-Kutta algorithm in the scipy library. 
+
+The third, plan.gif, is another model of 3 objects orbitting one another in a stable orbit. These configurations are extremely rare and the parameters that characterise this configuration are taken from the research papers (https://arxiv.org/pdf/1303.0181.pdf) and (https://arxiv.org/pdf/1709.04775.pdf). Again, we construct a second-order differential equation for each mass and carry out integration forward in time.
+
 
 [^1]: This is a consequence of Newton's Law of Universal Gravitation
 
